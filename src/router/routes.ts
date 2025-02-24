@@ -12,7 +12,6 @@ export const routes: RouteRecordRaw[] = [
             },
         ],
     },
-
     {
         path: '/',
         component: () => import('@/layouts/BlankLayout.vue'),
