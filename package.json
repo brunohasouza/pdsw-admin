@@ -9,6 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"maska": "^3.1.0",
 		"vee-validate": "^4.15.0",
 		"vue": "^3.5.13",
 		"vue-router": "^4.5.0",
@@ -16,6 +17,7 @@
 		"yup": "^1.6.1"
 	},
 	"devDependencies": {
+		"@faker-js/faker": "^9.5.0",
 		"@mdi/font": "^7.4.47",
 		"@types/node": "^22.13.4",
 		"@vitejs/plugin-vue": "^5.2.1",
