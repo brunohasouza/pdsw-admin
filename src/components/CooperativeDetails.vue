@@ -11,42 +11,55 @@
             />
         </template>
         <template #default="{ isActive }">
-            <VCard title="Detalhes da cooperativa">
-                <VList>
-                    <VListItem lines="two">
-                        <VListItemSubtitle>Nome fantasia</VListItemSubtitle>
-                        <VListItemTitle>{{ name }}</VListItemTitle>
-                    </VListItem>
-                    <VListItem lines="two">
-                        <VListItemSubtitle>Razão Social</VListItemSubtitle>
-                        <VListItemTitle>{{ companyName }}</VListItemTitle>
-                    </VListItem>
-                    <VListItem lines="two">
-                        <VListItemSubtitle>CNPJ</VListItemSubtitle>
-                        <VListItemTitle>{{
-                            documentMask.masked(document)
-                        }}</VListItemTitle>
-                    </VListItem>
-                    <VListItem lines="two">
-                        <VListItemSubtitle>Endereço</VListItemSubtitle>
-                        <VListItemTitle>{{ address }}</VListItemTitle>
-                        <VListItemTitle>{{ location }}</VListItemTitle>
-                    </VListItem>
-                    <VListItem lines="two">
-                        <VListItemSubtitle>E-mail</VListItemSubtitle>
-                        <VListItemTitle>{{ email }}</VListItemTitle>
-                    </VListItem>
-                    <VListItem lines="two">
-                        <VListItemSubtitle>Telefone</VListItemSubtitle>
-                        <VListItemTitle>{{
-                            phoneMask.masked(phone)
-                        }}</VListItemTitle>
-                    </VListItem>
-                </VList>
-                <VCardActions>
+            <VCard>
+                <VCardTitle class="d-flex justify-space-between align-center">
+                    <div class="text-h5 text-medium-emphasis ps-2">
+                        {{ name }}
+                    </div>
+                    <VBtn
+                        icon="mdi-close"
+                        variant="text"
+                        @click="isActive.value = false"
+                    />
+                </VCardTitle>
+                <VDivider />
+                <VCardText>
+                    <VList>
+                        <VListItem lines="two">
+                            <VListItemSubtitle>Nome fantasia</VListItemSubtitle>
+                            <VListItemTitle>{{ name }}</VListItemTitle>
+                        </VListItem>
+                        <VListItem lines="two">
+                            <VListItemSubtitle>Razão Social</VListItemSubtitle>
+                            <VListItemTitle>{{ companyName }}</VListItemTitle>
+                        </VListItem>
+                        <VListItem lines="two">
+                            <VListItemSubtitle>CNPJ</VListItemSubtitle>
+                            <VListItemTitle>{{
+                                documentMask.masked(document)
+                            }}</VListItemTitle>
+                        </VListItem>
+                        <VListItem lines="two">
+                            <VListItemSubtitle>Endereço</VListItemSubtitle>
+                            <VListItemTitle>{{ address }}</VListItemTitle>
+                            <VListItemTitle>{{ location }}</VListItemTitle>
+                        </VListItem>
+                        <VListItem lines="two">
+                            <VListItemSubtitle>E-mail</VListItemSubtitle>
+                            <VListItemTitle>{{ email }}</VListItemTitle>
+                        </VListItem>
+                        <VListItem lines="two">
+                            <VListItemSubtitle>Telefone</VListItemSubtitle>
+                            <VListItemTitle>{{
+                                phoneMask.masked(phone)
+                            }}</VListItemTitle>
+                        </VListItem>
+                    </VList>
+                </VCardText>
+                <VDivider />
+                <VCardActions class="my-2 d-flex justify-end">
                     <VBtn
                         text="Fechar"
-                        variant="tonal"
                         color="error"
                         @click="isActive.value = false"
                     />
